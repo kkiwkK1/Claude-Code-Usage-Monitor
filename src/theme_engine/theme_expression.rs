@@ -521,6 +521,7 @@ pub(super) fn format_usage_line(base: &str, context: &DataContext) -> Option<Str
                 | "cursor"
                 | "grok"
                 | "copilot"
+                | "zcode"
         ))
         || (dynamic.is_none()
             && !matches!(

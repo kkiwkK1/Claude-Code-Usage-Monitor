@@ -3,7 +3,7 @@
 ![Windows](https://img.shields.io/badge/platform-Windows-blue)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-A lightweight, open-source Windows taskbar widget for monitoring Claude Code usage limits and reset times. It can also display usage for Codex, Google Antigravity, OpenCode Go, Cursor, Grok Build, and GitHub Copilot.
+A lightweight, open-source Windows taskbar widget for monitoring Claude Code usage limits and reset times. It can also display usage for Codex, Google Antigravity, OpenCode Go, Cursor, Grok Build, GitHub Copilot, and the ZCode Coding Plan.
 
 See the [user guide](USER_GUIDE.md) for theme customisation and everyday settings,
 or the [changelog](CHANGELOG.md) for version history and notable changes.
@@ -14,7 +14,7 @@ or the [changelog](CHANGELOG.md) for version history and notable changes.
 
 - Displays current usage and time remaining until each limit resets
 - Counts usage up from zero or down from the full allowance, whichever you prefer
-- Supports Claude Code, Codex, Google Antigravity, OpenCode Go, Cursor, Grok Build, and GitHub Copilot
+- Supports Claude Code, Codex, Google Antigravity, OpenCode Go, Cursor, Grok Build, GitHub Copilot, and the ZCode Coding Plan
 - Supports multiple accounts for Claude Code and Codex
 - Lives in the Windows taskbar with quick controls in the system tray
 - Supports multiple monitors and Windows startup
@@ -71,6 +71,7 @@ In the default theme, left-click a provider tray icon to show or hide the widget
 | OpenCode Go | Connect an OpenCode Go account, configure the credentials described below, then enable OpenCode in **Providers**. |
 | Cursor | Sign in to Cursor, then enable it in **Providers**. The local session is detected automatically. |
 | Grok Build | Run `grok login` in the Grok Build CLI, then enable Grok in **Providers**. The signed-in session is detected automatically. |
+| ZCode Coding Plan | Install the ZCode CLI and use it once so `%USERPROFILE%\.zcode\cli\db\db.sqlite` exists, then enable ZCode in **Providers**. Optional: set `ZCODE_FIVE_HOUR_QUOTA` / `ZCODE_WEEKLY_QUOTA` (prompts per window) to your plan's limits so the gauges show a percentage. |
 | GitHub Copilot | Sign in with the Copilot CLI (`copilot`, then `/login`) or the GitHub CLI (`gh auth login`), then enable Copilot in **Providers**. The stored login is detected automatically. |
 
 For OpenCode Go, set `OPENCODE_GO_WORKSPACE_ID` and `OPENCODE_GO_AUTH_COOKIE`, or create `%APPDATA%\opencode-go\config.json`:

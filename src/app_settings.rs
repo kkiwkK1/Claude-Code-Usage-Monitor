@@ -62,6 +62,8 @@ pub struct SettingsFile {
     show_grok: bool,
     #[serde(default)]
     show_copilot: bool,
+    #[serde(default)]
+    show_zcode: bool,
     #[serde(default = "default_true")]
     pub custom_theme_enabled: bool,
     /// Show what is left of each allowance instead of what has been spent, so
@@ -127,6 +129,7 @@ impl Default for SettingsFile {
             show_cursor: false,
             show_grok: false,
             show_copilot: false,
+            show_zcode: false,
             custom_theme_enabled: true,
             usage_countdown: false,
             active_theme_path: None,
@@ -211,6 +214,7 @@ impl SettingsFile {
             ProviderId::Cursor => self.show_cursor,
             ProviderId::Grok => self.show_grok,
             ProviderId::Copilot => self.show_copilot,
+            ProviderId::Zcode => self.show_zcode,
         }
     }
 
@@ -223,6 +227,7 @@ impl SettingsFile {
             ProviderId::Cursor => self.show_cursor = enabled,
             ProviderId::Grok => self.show_grok = enabled,
             ProviderId::Copilot => self.show_copilot = enabled,
+            ProviderId::Zcode => self.show_zcode = enabled,
         }
     }
 
@@ -573,6 +578,7 @@ mod tests {
             ProviderId::Cursor,
             ProviderId::Grok,
             ProviderId::Copilot,
+            ProviderId::Zcode,
         ]));
 
         let json = settings_json(&settings);

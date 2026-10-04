@@ -67,6 +67,10 @@ opencode_window_title = "OpenCode 使用量モニター"
 cursor_window_title = "Cursor 使用量モニター"
 grok_window_title = "Grok 使用量モニター"
 copilot_window_title = "Copilot 使用量モニター"
+zcode_model = "ZCode"
+zcode_token_expired_title = "ZCode のデータを利用できません"
+zcode_token_expired_body = "ZCode CLI がインストールされ、ローカルデータベースが作られるまで少なくとも一度実行してから、更新してください。"
+zcode_window_title = "ZCode 使用量モニター"
 
 [translations]
 "Absolute value" = "絶対値"

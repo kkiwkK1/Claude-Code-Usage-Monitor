@@ -118,6 +118,7 @@ impl DataContext {
                     | "cursor"
                     | "grok"
                     | "copilot"
+                    | "zcode"
                     | "active"
             ) {
                 return None;

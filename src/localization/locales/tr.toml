@@ -65,6 +65,10 @@ opencode_window_title = "OpenCode Kullanım İzleyicisi"
 cursor_window_title = "Cursor Kullanım İzleyicisi"
 grok_window_title = "Grok Kullanım İzleyicisi"
 copilot_window_title = "Copilot Kullanım İzleyicisi"
+zcode_model = "ZCode"
+zcode_token_expired_title = "ZCode verileri kullanılamıyor"
+zcode_token_expired_body = "ZCode CLI'nin kurulu olduğundan ve yerel veritabanının oluşması için en az bir kez kullanıldığından emin olun, sonra yenileyin."
+zcode_window_title = "ZCode Kullanım İzleyici"
 
 [translations]
 "Absolute value" = "Mutlak değer"

@@ -67,6 +67,10 @@ opencode_window_title = "OpenCode 사용량 모니터"
 cursor_window_title = "Cursor 사용량 모니터"
 grok_window_title = "Grok 사용량 모니터"
 copilot_window_title = "Copilot 사용량 모니터"
+zcode_model = "ZCode"
+zcode_token_expired_title = "ZCode 데이터를 사용할 수 없음"
+zcode_token_expired_body = "ZCode CLI가 설치되어 있고 로컬 데이터베이스가 생성되도록 최소 한 번 실행한 후 새로 고침에요."
+zcode_window_title = "ZCode 사용량 모니터"
 
 [translations]
 "Absolute value" = "절댓값"

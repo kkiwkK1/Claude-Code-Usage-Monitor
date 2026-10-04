@@ -62,6 +62,10 @@ pub(crate) fn provider_mark_glyph(provider: ProviderId) -> char {
         ProviderId::Cursor => '\u{f005}',
         ProviderId::Grok => '\u{f006}',
         ProviderId::Copilot => '\u{f007}',
+        // TODO(brand-marks): draw a dedicated ZCode mark into brand-marks.ttf
+        // at the next free codepoint (U+F008). The OpenCode ring stands in
+        // until then so the settings row keeps a visible provider mark.
+        ProviderId::Zcode => '\u{f004}',
     }
 }
 

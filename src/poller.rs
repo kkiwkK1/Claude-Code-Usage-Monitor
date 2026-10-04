@@ -285,6 +285,7 @@ mod grok;
 mod opencode;
 mod retry_after;
 mod windows_credentials;
+mod zcode;
 
 pub use retry_after::retry_delay_ms;
 
@@ -294,7 +295,7 @@ struct ProviderPoller {
     credential_watch: fn(bool) -> CredentialWatchSnapshot,
 }
 
-const PROVIDER_POLLERS: [ProviderPoller; 7] = [
+const PROVIDER_POLLERS: [ProviderPoller; 8] = [
     ProviderPoller {
         id: ProviderId::Claude,
         poll: claude::poll_claude_code,
@@ -329,6 +330,11 @@ const PROVIDER_POLLERS: [ProviderPoller; 7] = [
         id: ProviderId::Copilot,
         poll: copilot::poll_copilot,
         credential_watch: copilot::credential_watch_snapshot,
+    },
+    ProviderPoller {
+        id: ProviderId::Zcode,
+        poll: zcode::poll_zcode,
+        credential_watch: zcode::credential_watch_snapshot,
     },
 ];
 

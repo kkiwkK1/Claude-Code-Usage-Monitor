@@ -65,6 +65,10 @@ opencode_window_title = "OpenCode Usage Monitor"
 cursor_window_title = "Cursor Usage Monitor"
 grok_window_title = "Grok Usage Monitor"
 copilot_window_title = "Copilot Usage Monitor"
+zcode_model = "ZCode"
+zcode_token_expired_title = "ZCode Data Unavailable"
+zcode_token_expired_body = "Make sure the ZCode CLI is installed and has been used at least once so its local database exists, then refresh."
+zcode_window_title = "ZCode Usage Monitor"
 
 [translations]
 "Absolute value" = "Absolute value"

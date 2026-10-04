@@ -92,6 +92,22 @@ Custom theme files are stored in:
 These settings save automatically. The default theme adapts to enabled providers;
 a custom theme must include layers for the providers you want to display.
 
+### ZCode Coding Plan
+
+ZCode usage is computed locally from the CLI's own database,
+`%USERPROFILE%\.zcode\cli\db\db.sqlite`, which is only ever opened read-only
+through Windows' bundled SQLite, so polling cannot disturb a running CLI. Only
+Coding Plan traffic is counted (requests whose provider id ends in
+`coding-plan`); the start and off-peak plans are a separate allowance and are
+excluded. Set `ZCODE_DB_PATH` if the CLI keeps its database elsewhere.
+
+Because no local source publishes your plan's quota, the gauge denominators are
+opt-in: set `ZCODE_FIVE_HOUR_QUOTA` and `ZCODE_WEEKLY_QUOTA` to the prompt
+limits printed on your plan page and the gauges show a percentage. Without
+them the windows stay available with a 0 % gauge, and the raw prompt/token
+counts remain available to custom themes through `zcode.limits.five_hour` and
+`zcode.limits.weekly`.
+
 ## Show used or remaining allowance
 
 1. Open **Settings > Display**.

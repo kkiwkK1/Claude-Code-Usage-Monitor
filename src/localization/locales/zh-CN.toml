@@ -67,6 +67,10 @@ opencode_window_title = "OpenCode Usage Monitor"
 cursor_window_title = "Cursor 使用量监控"
 grok_window_title = "Grok 使用量监控"
 copilot_window_title = "Copilot 使用量监控"
+zcode_model = "ZCode"
+zcode_token_expired_title = "ZCode 数据不可用"
+zcode_token_expired_body = "请确认已安装 ZCode CLI 并至少使用过一次（以生成本地数据库），然后刷新。"
+zcode_window_title = "ZCode 用量监控"
 
 [translations]
 "Absolute value" = "绝对值"
