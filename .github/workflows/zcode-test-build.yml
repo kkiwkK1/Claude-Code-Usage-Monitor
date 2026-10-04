@@ -1,0 +1,33 @@
+name: ZCode branch test build
+
+# Verification build for the feat/zcode-coding-plan branch on this fork.
+# Produces the same release binary as the official release workflow, but
+# uploads it as a workflow artifact instead of creating a release.
+on:
+  workflow_dispatch:
+  push:
+    branches: [ci-zcode-build]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    name: Build release binary
+    runs-on: windows-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v7
+
+      # Keep in sync with rust-toolchain.toml.
+      - uses: dtolnay/rust-toolchain@1.95.0
+
+      - name: Build release binary
+        run: cargo build --release --locked
+
+      - name: Upload test build
+        uses: actions/upload-artifact@v4
+        with:
+          name: claude-code-usage-monitor-zcode-test
+          path: target/release/claude-code-usage-monitor.exe
+          if-no-files-found: error
